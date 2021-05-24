@@ -22,14 +22,14 @@ const Home: React.FC = () => {
         <IconHeader disableTooltip tooltip="Menu" icon={FiMenu} />
         <Image ml={2} w={8} src="youtube.svg" alt="youtube" />
       </Flex>
-      <Spacer />
+      <Spacer/>
       <Box
         display={["none", "none", "flex", "flex"]}
         width={[
           "0%", // 0-30em
           "25%", // 30em-48em
           "40%", // 48em-62em
-          "50%", // 62em+
+          "55%", // 62em+
         ]}
         h="10"
       >
