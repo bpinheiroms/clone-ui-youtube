@@ -18,16 +18,17 @@ import { Input } from "@chakra-ui/react";
 const Home: React.FC = () => {
   return (
     <Flex bg="primary" w="100%" p={3}>
-      <Flex w="156px" h="10">
+      <Flex w="140px" h="10">
         <IconHeader disableTooltip tooltip="Menu" icon={FiMenu} />
         <Image ml={2} w={8} src="youtube.svg" alt="youtube" />
       </Flex>
       <Spacer />
       <Box
+        display={["none", "none", "flex", "flex"]}
         width={[
           "0%", // 0-30em
-          "40%", // 30em-48em
-          "50%", // 48em-62em
+          "25%", // 30em-48em
+          "40%", // 48em-62em
           "50%", // 62em+
         ]}
         h="10"
@@ -39,13 +40,21 @@ const Home: React.FC = () => {
             placeholder="Search"
             color="white"
           />
-          <InputRightAddon bg="#323232" border="transparent"
-            children={<IconHeader color="#999999" tooltip="Search" icon={MdSearch} />}
+          <InputRightAddon
+            bg="#323232"
+            border="transparent"
+            children={
+              <IconHeader color="#999999" tooltip="Search" icon={MdSearch} />
+            }
           />
-          <IconHeader tooltip="Search with your voice" icon={MdKeyboardVoice} />
         </InputGroup>
       </Box>
-      <Spacer />
+      <IconHeader tooltip="Search with your voice" icon={MdKeyboardVoice} />
+      <Box display={["flex", "flex", "none", "none"]}>
+        <IconHeader tooltip="Search" icon={MdSearch} />
+      </Box>
+
+      <Spacer display={["none", "none", "flex", "flex"]} />
       <Box w="225px" h="10">
         <IconHeader tooltip="Create" icon={RiVideoAddFill} />
         <IconHeader tooltip="YouTube apps" icon={BsFillGrid3X3GapFill} />
