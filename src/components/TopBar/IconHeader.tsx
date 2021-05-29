@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
 
@@ -7,6 +7,7 @@ interface Props {
   disableTooltip?: boolean;
   icon: IconType;
   color?: string;
+  callback?: any;
 }
 
 const IconHeader: React.FC<Props> = ({
@@ -14,10 +15,17 @@ const IconHeader: React.FC<Props> = ({
   icon,
   disableTooltip,
   color,
+  callback,
 }) => {
+  const doSomenthing = () => {
+    if (callback) {
+      callback();
+    }
+  };
   return (
     <Tooltip label={tooltip} aria-label={tooltip} isDisabled={disableTooltip}>
       <IconButton
+        onClick={doSomenthing}
         aria-label={tooltip}
         icon={<Icon as={icon} w={6} h={6} color={color || "white"} />}
         colorScheme="transparent"
@@ -29,4 +37,4 @@ const IconHeader: React.FC<Props> = ({
   );
 };
 
-export default IconHeader;
+export default memo(IconHeader);
