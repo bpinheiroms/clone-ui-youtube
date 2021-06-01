@@ -6,7 +6,7 @@ import { HeaderProvider } from "../../context/Header";
 
 const TopBar: React.FC = () => {
   return (
-    <Flex bg="primary" w="100%" p={3}>
+    <Flex pos="fixed" bg="primary" w="100%" p={3}>
       <HeaderProvider>
         <SearchResponsiveHeader />
         <SearchNormalHeader />

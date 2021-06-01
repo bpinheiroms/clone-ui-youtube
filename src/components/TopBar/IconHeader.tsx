@@ -27,9 +27,10 @@ const IconHeader: React.FC<Props> = ({
       <IconButton
         onClick={doSomenthing}
         aria-label={tooltip}
-        icon={<Icon as={icon} w={6} h={6} color={color || "white"} />}
+        icon={<Icon as={icon} w={5} h={5} color={color || "white"} />}
         colorScheme="transparent"
         color={color || "white"}
+        
         m={2}
         h={6}
       />
