@@ -11,9 +11,6 @@ import { useSpecialHeader } from "../../../hooks/useSpecialHeader";
 const SearchNormalHeader: React.FC = () => {
   const { isMobileSearchOpen } = useSpecialHeader();
 
-  // const renders = React.useRef(0);
-  // console.log("SearchNormalHeader", renders.current++);
-
   return !isMobileSearchOpen ? (
     <>
       <MenuYoutube />

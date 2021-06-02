@@ -9,8 +9,8 @@ const SearchHeader: React.FC = () => {
       width={[
         "0%", // 0-30em
         "25%", // 30em-48em
-        "40%", // 48em-62em
-        "55%", // 62em+
+        "30%", // 48em-62em
+        "45%", // 62em+
       ]}
       h="10"
     >

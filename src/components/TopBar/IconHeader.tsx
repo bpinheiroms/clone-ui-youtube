@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Icon, IconButton, Tooltip } from "@chakra-ui/react";
+import { border, Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
 
 interface Props {
@@ -30,7 +30,7 @@ const IconHeader: React.FC<Props> = ({
         icon={<Icon as={icon} w={5} h={5} color={color || "white"} />}
         colorScheme="transparent"
         color={color || "white"}
-        
+        _focus={{ shadow: "none"}}
         m={2}
         h={6}
       />
