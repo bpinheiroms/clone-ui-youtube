@@ -1,28 +1,31 @@
 import {
   Box,
-  Divider,
   Drawer,
   DrawerBody,
-  DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Stack,
 } from "@chakra-ui/react";
 import React, { memo, useMemo } from "react";
-import { IoMdCompass, IoMdHome } from "react-icons/io";
+import { IoMdCompass, IoMdHome, IoMdSettings } from "react-icons/io";
+import { FaLightbulb, FaTrophy, FaYoutube } from "react-icons/fa";
 import {
   MdSubscriptions,
   MdVideoLibrary,
   MdSchedule,
   MdKeyboardArrowDown,
+  MdLocalMovies,
+  MdFlag,
 } from "react-icons/md";
-import { BiHistory } from "react-icons/bi";
+import { BiHelpCircle, BiHistory } from "react-icons/bi";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { useSidebarDrawer } from "../../context/SideBarDrawerContext";
 import MenuYoutube from "../TopBar/MenuYoutube";
 import DivisorDrawer from "./DivisorDrawer";
-import IconItem from "./IconItem";
+import IconItem, { eSubscription } from "./IconItem";
+import { CgProfile } from "react-icons/cg";
+import { GiAerialSignal, GiGamepad, GiHanger } from "react-icons/gi";
+import { BsExclamationSquareFill } from "react-icons/bs";
 
 const DrawerSideBar: React.FC = () => {
   const { isOpen, onClose } = useSidebarDrawer();
@@ -102,6 +105,130 @@ const DrawerSideBar: React.FC = () => {
           },
         ],
       },
+      {
+        idGroup: 3,
+        title: "Subscriptions",
+        itens: [
+          {
+            id: 9,
+            icon: CgProfile,
+            isSelected: false,
+            title: "Canal 1",
+            subscriptionsType: eSubscription.stream,
+            onClick: () => {},
+          },
+          {
+            id: 10,
+            icon: CgProfile,
+            isSelected: false,
+            title: "Canal 2",
+            subscriptionsType: eSubscription.new,
+            onClick: () => {},
+          },
+          {
+            id: 11,
+            icon: CgProfile,
+            isSelected: false,
+            title: "Canal 3",
+            onClick: () => {},
+          },
+          {
+            id: 12,
+            icon: MdKeyboardArrowDown,
+            isSelected: false,
+            title: "Show 204 more",
+            onClick: () => {},
+          },
+        ],
+      },
+      {
+        idGroup: 4,
+        title: "MORE FROM YOUTUBE",
+        itens: [
+          {
+            id: 13,
+            icon: FaYoutube,
+            isSelected: false,
+            title: "Youtube Premium",
+            onClick: () => {},
+          },
+          {
+            id: 14,
+            icon: MdLocalMovies,
+            isSelected: false,
+            title: "Movies",
+            onClick: () => {},
+          },
+          {
+            id: 15,
+            icon: GiGamepad,
+            isSelected: false,
+            title: "Gaming",
+            onClick: () => {},
+          },
+          {
+            id: 16,
+            icon: GiAerialSignal,
+            isSelected: false,
+            title: "Live",
+            onClick: () => {},
+          },
+          {
+            id: 17,
+            icon: GiHanger,
+            isSelected: false,
+            title: "Fashion & Beauty",
+            onClick: () => {},
+          },
+          {
+            id: 18,
+            icon: FaLightbulb,
+            isSelected: false,
+            title: "Learning",
+            onClick: () => {},
+          },
+          {
+            id: 19,
+            icon: FaTrophy,
+            isSelected: false,
+            title: "Sports",
+            onClick: () => {},
+          },
+        ],
+      },
+      {
+        idGroup: 5,
+        itens: [
+          {
+            id: 20,
+            icon: IoMdSettings,
+            isSelected: false,
+            title: "Settings",
+            onClick: () => {},
+          },
+          {
+            id: 21,
+            icon: MdFlag,
+            isSelected: false,
+            title: "Report history",
+            onClick: () => {},
+          },
+          {
+            id: 22,
+            icon: BiHelpCircle,
+            isSelected: false,
+            title: "Help",
+            onClick: () => {},
+          },
+          {
+            id: 23,
+            icon: BsExclamationSquareFill,
+            isSelected: false,
+            title: "Send feedback",
+            onClick: () => {},
+          },
+        ],
+      },
     ];
   }, []);
 
@@ -132,6 +259,18 @@ const DrawerSideBar: React.FC = () => {
           >
             {groupItems.map((group) => (
               <div key={group.idGroup}>
+                {group.title && (
+                  <Box
+                    color="iconGray"
+                    ml="25px"
+                    mb="10px"
+                    fontWeight="bold"
+                    as="p"
+                    fontSize="15px"
+                  >
+                    {group.title}
+                  </Box>
+                )}
                 {group.itens.map((item) => (
                   <IconItem
                     key={item.id}
@@ -142,6 +281,7 @@ const DrawerSideBar: React.FC = () => {
                     textConfig={configsSizeItens.textConfig}
                     onClick={item.onClick}
                     title={item.title}
+                    subscriptionsType={item.subscriptionsType}
                   />
                 ))}
                 <DivisorDrawer />

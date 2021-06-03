@@ -10,7 +10,7 @@ const DivisorDrawer: React.FC<Props> = ({ disableBottom }) => {
     <Box
       mt="15px"
       mb={disableBottom ? "0px" : "15px"}
-      w="320px"
+      w="305px"
       borderBottom="1px"
       borderColor="iconHover"
     ></Box>

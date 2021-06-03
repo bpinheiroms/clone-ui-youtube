@@ -1,6 +1,14 @@
 import React, { memo, useMemo } from "react";
-import { Flex, Icon, IconButton, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, IconButton, Spacer, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
+import { GoPrimitiveDot } from "react-icons/go";
+import { GiAerialSignal } from "react-icons/gi";
+
+export enum eSubscription {
+  empty,
+  new,
+  stream,
+}
 
 interface Props {
   title: string;
@@ -10,6 +18,7 @@ interface Props {
   isDrawer?: boolean;
   flexConfig?: FlexConfig;
   textConfig?: TextConfig;
+  subscriptionsType?: eSubscription;
 }
 
 interface FlexConfig {
@@ -36,6 +45,7 @@ const IconItem: React.FC<Props> = ({
     fontSize: "10px",
     marginTop: "0px",
   },
+  subscriptionsType = eSubscription.empty,
 }) => {
   const colorSelected = useMemo(() => {
     const config = {
@@ -85,6 +95,19 @@ const IconItem: React.FC<Props> = ({
       >
         {title}
       </Text>
+
+      {subscriptionsType !== eSubscription.empty && (
+        <>
+          <Spacer />
+          <Box w="30px" mt="5px" color="white">
+            {subscriptionsType === eSubscription.stream ? (
+              <Icon as={GiAerialSignal} w={4} h={4} color="#FF0000" />
+            ) : (
+              <Icon as={GoPrimitiveDot} w={3} h={3} color="#3D9EEF" />
+            )}
+          </Box>
+        </>
+      )}
     </Flex>
   );
 };
