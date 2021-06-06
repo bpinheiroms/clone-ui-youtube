@@ -19,9 +19,6 @@ const Main: React.FC = () => {
         name: "Cryptocurrency",
       },
       {
-        name: "Comedies",
-      },
-      {
         id: 4,
         name: "Courses",
       },
@@ -65,6 +62,10 @@ const Main: React.FC = () => {
         id: 14,
         name: "Amazon Alexa",
       },
+      {
+        id: 15,
+        name: "Comedies",
+      },
     ];
   }, []);
 
@@ -76,14 +77,15 @@ const Main: React.FC = () => {
       mt="-16px"
       h="60px"
       bg="primary"
-      w="100%"
       p="13px"
       pl="20px"
     >
       {filters.map((filter) => (
-        <div key={filter.id}>
-          <FilterItem title={filter.name} isSelected={filter.isSelected} />
-        </div>
+        <FilterItem
+          key={filter.id}
+          title={filter.name}
+          isSelected={filter.isSelected}
+        />
       ))}
     </Flex>
   );
