@@ -70,8 +70,6 @@ const Main: React.FC = () => {
     ];
   }, []);
 
-  const [isLargerThan770] = useMediaQuery("(min-width: 770px)");
-
   return (
     <Flex
       borderTop="1px"
@@ -82,10 +80,10 @@ const Main: React.FC = () => {
       bg="primary"
       p="13px"
       pl="20px"
+      f="1"
       position="fixed"
-      w="100%"
     >
-      <Box w="30px">
+      <Box>
         <IconButton
           aria-label="Previous"
           color="white"
@@ -93,7 +91,7 @@ const Main: React.FC = () => {
           colorScheme="transparent"
         />
       </Box>
-      <Box flex="1" overflow="hidden">
+      <Box flex="1" display="inline-block" overflowY="hidden" width="50%">
         {filters.map((filter) => (
           <FilterItem
             key={filter.id}
@@ -102,10 +100,7 @@ const Main: React.FC = () => {
           />
         ))}
       </Box>
-      <Box
-        w={isLargerThan770 ? "100px" : ""}
-        mr={isLargerThan770 ? "20px" : ""}
-      >
+      <Box>
         <IconButton
           aria-label="Next"
           color="white"
