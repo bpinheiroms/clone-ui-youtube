@@ -14,7 +14,7 @@ const FilterItem: React.FC<Props> = ({ isSelected, title }) => {
       ml="20px"
       bg={isSelected ? "white" : "#4a4a4a"}
       color={isSelected ? "black" : "white"}
-      _hover={{ backgroundColor: "#5b5959", color: "" }}
+      _hover={!isSelected ? { backgroundColor: "#5b5959"} : {}}
     >
       {title}
     </Button>

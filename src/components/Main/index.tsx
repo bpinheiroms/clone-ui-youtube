@@ -81,11 +81,9 @@ const Main: React.FC = () => {
       pl="20px"
     >
       {filters.map((filter) => (
-        <FilterItem
-          key={filter.id}
-          title={filter.name}
-          isSelected={filter.isSelected}
-        />
+        <div key={filter.id}>
+          <FilterItem title={filter.name} isSelected={filter.isSelected} />
+        </div>
       ))}
     </Flex>
   );
