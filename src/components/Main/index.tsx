@@ -1,6 +1,7 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, Icon, IconButton, useMediaQuery } from "@chakra-ui/react";
 import React, { useMemo } from "react";
 import FilterItem from "./FilterItem";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 const Main: React.FC = () => {
   const filters = useMemo(() => {
@@ -69,6 +70,8 @@ const Main: React.FC = () => {
     ];
   }, []);
 
+  const [isLargerThan770] = useMediaQuery("(min-width: 770px)");
+
   return (
     <Flex
       borderTop="1px"
@@ -79,14 +82,37 @@ const Main: React.FC = () => {
       bg="primary"
       p="13px"
       pl="20px"
+      position="fixed"
+      w="100%"
     >
-      {filters.map((filter) => (
-        <FilterItem
-          key={filter.id}
-          title={filter.name}
-          isSelected={filter.isSelected}
+      <Box w="30px">
+        <IconButton
+          aria-label="Previous"
+          color="white"
+          icon={<Icon w={6} h={6} as={MdNavigateBefore} color="white" />}
+          colorScheme="transparent"
         />
-      ))}
+      </Box>
+      <Box flex="1" overflow="hidden">
+        {filters.map((filter) => (
+          <FilterItem
+            key={filter.id}
+            title={filter.name}
+            isSelected={filter.isSelected}
+          />
+        ))}
+      </Box>
+      <Box
+        w={isLargerThan770 ? "100px" : ""}
+        mr={isLargerThan770 ? "20px" : ""}
+      >
+        <IconButton
+          aria-label="Next"
+          color="white"
+          icon={<Icon w={6} h={6} as={MdNavigateNext} color="white" />}
+          colorScheme="transparent"
+        />
+      </Box>
     </Flex>
   );
 };

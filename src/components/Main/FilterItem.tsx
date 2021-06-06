@@ -1,5 +1,5 @@
 import { Box, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { memo } from "react";
 
 interface Props {
   isSelected?: boolean;
@@ -21,4 +21,4 @@ const FilterItem: React.FC<Props> = ({ isSelected, title }) => {
   );
 };
 
-export default FilterItem;
+export default memo(FilterItem);
