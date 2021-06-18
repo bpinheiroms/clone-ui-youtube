@@ -6,7 +6,8 @@ import { MdSubscriptions, MdVideoLibrary } from "react-icons/md";
 import IconItem from "./IconItem";
 
 const SideBar: React.FC = () => {
-  const canShow = useBreakpointValue({ base: false, md: true });
+  const canShow = false;
+  // const canShow = useBreakpointValue({ base: false, md: true });
 
   return canShow ? (
     <Box pt="70px" w="80px" h="100vh" bg="primary">
