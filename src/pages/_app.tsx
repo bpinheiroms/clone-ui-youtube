@@ -17,8 +17,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <Flex>
           <DrawerSideBar />
           <SideBar />
-          <Flex pt="80px" h="100vh" flex="1" bg="secundary">
-            <Component {...pageProps} />
+          <Flex pt="80px" h="100%" flex="1" bg="secundary">
+            <Component {...pageProps}  />
           </Flex>
         </Flex>
       </SidebarDrawerProvider>
