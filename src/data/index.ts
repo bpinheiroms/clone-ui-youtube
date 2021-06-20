@@ -10,8 +10,90 @@ export const videos = [
     views: "10k",
     timesAgo: "1 day ago",
     link: "https://www.youtube.com/watch?v=3PCAaGALmgs&ab_channel=MercadoBitcoin",
-    hover:
-      "https://i.ytimg.com/an_webp/3PCAaGALmgs/mqdefault_6s.webp?du=3000&sqp=CL2YuoYG&rs=AOn4CLDzUFktsZ-sGSkvbjTnH8Zx3wG2vA",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/phijeVP2HxM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTaxyoYWCmCrHQWYej9kF_OHijvQ",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwni4bhg6C4gGJXvSuhzlJFOEz8kw0-bedQSJaY0W7g=s48-c-k-c0x00ffffff-no-rj",
+      name: "Usecripto",
+    },
+    title: "DeFi EXPLICADO! ENTENDA AS FINANÇAS DESCENTRALIZADAS",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=phijeVP2HxM&ab_channel=Usecripto",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/F0i-O7_CFU8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtsp75e6y00RLpTYKB9thacM-6zQ",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwniIIBZzMQq8v62uK_ykS7zsNF7N6-_NnIbKKx0Q=s48-c-k-c0x00ffffff-no-rj",
+      name: "Fernando Ulrich",
+    },
+    title: "Ethereum, Altseason, DeFi e a disrupção tecnológica",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=F0i-O7_CFU8",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/aGFXLso_jKY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMZWZLQZu8fk9r8mmfjD5b3rLtYg",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwnhxtkppYu-FSOAoKTBcHtSjFcwGDxL4GF3gfS4s6Y8=s48-c-k-c0x00ffffff-no-rj",
+      name: "Lucas Montano",
+    },
+    title: "Bitcoin e Respondendo O Primo Rico",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=aGFXLso_jKY",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/56XNtGQALpE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA0mHW7d0V1R0koXoJyeCdNKMByBA",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwnhxtkppYu-FSOAoKTBcHtSjFcwGDxL4GF3gfS4s6Y8=s48-c-k-c0x00ffffff-no-rj",
+      name: "Lucas Montano",
+    },
+    title: "Quanto ganha um Programador Blockchain",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=56XNtGQALpE",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/91kUkH9HM4M/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIS13f5kvOJNkIdiiit3yOTNSp_w",
+      channel: {
+        logo: "https://yt3.ggpht.com/ytc/AAUvwni4bhg6C4gGJXvSuhzlJFOEz8kw0-bedQSJaY0W7g=s48-c-k-c0x00ffffff-no-rj",
+        name: "Usecripto",
+      },
+    title: "WEB 3.0 - blockchain vai MUDAR a internet!",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=91kUkH9HM4M",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/UXlQkgDNYGc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCB3cn-nQRnmApWrIgpxux8FNaigQ",
+      channel: {
+        logo: "https://yt3.ggpht.com/ytc/AAUvwnhX4LctStjqydlpowedy0zxaQ3aGxnRWT8nK1DDRQ=s48-c-k-c0x00ffffff-no-rj",
+        name: "Mercurius Crypto",
+      },
+    title: "O QUE SÃO STABLECOINS | Dolarize sua Carteira!",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=UXlQkgDNYGc",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/CuI4JcS6ECY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAK181YJ5C-fGrpCohkqHQgRHJGhw",
+      channel: {
+        logo: "https://yt3.ggpht.com/ytc/AAUvwnh4L1KPrrlsgx576wu_cl-yHiBZ39J-x19NM83Y=s48-c-k-c0x00ffffff-no-rj",
+        name: "BitcoinTrade",
+      },
+    title: "BitcoinTrade - Nova Criptomoeda - DAI",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=CuI4JcS6ECY&ab_channel=BitcoinTradeBitcoinTrade",
   },
   {
     thumb:
@@ -37,18 +119,6 @@ export const videos = [
     views: "10k",
     timesAgo: "1 day ago",
     link: "https://www.youtube.com/watch?v=1rgMSPNlUtc&ab_channel=CapitalGlobal",
-  },
-  {
-    thumb:
-      "https://i.ytimg.com/vi/phijeVP2HxM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTaxyoYWCmCrHQWYej9kF_OHijvQ",
-    channel: {
-      logo: "https://yt3.ggpht.com/ytc/AAUvwni4bhg6C4gGJXvSuhzlJFOEz8kw0-bedQSJaY0W7g=s48-c-k-c0x00ffffff-no-rj",
-      name: "Usecripto",
-    },
-    title: "DeFi EXPLICADO! ENTENDA AS FINANÇAS DESCENTRALIZADAS",
-    views: "10k",
-    timesAgo: "1 day ago",
-    link: "https://www.youtube.com/watch?v=phijeVP2HxM&ab_channel=Usecripto",
   },
   {
     thumb:
@@ -148,5 +218,29 @@ export const videos = [
     views: "10k",
     timesAgo: "1 day ago",
     link: "https://www.youtube.com/watch?v=4IE0rzJolWo",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/TgbsC1vnhsU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDihsFqTEo-wX599mu691sSX1hOEA",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwniA5geMKZ_qqndaNAzJKHDnlHTxOdHUw1kYPFN94Q=s48-c-k-c0x00ffffff-no-rj",
+      name: "InPlanB",
+    },
+    title: "O que é yield farming em DeFi?",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=TgbsC1vnhsU",
+  },
+  {
+    thumb:
+      "https://i.ytimg.com/vi/9U8ixM0hBFA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwYFVhkm0eqehBUfszuhUIXCmozQ",
+    channel: {
+      logo: "https://yt3.ggpht.com/ytc/AAUvwngXKxGFy9uTVMIH3zQr04FEMYdDRhvmX7fpoEb9Kg=s48-c-k-c0x00ffffff-no-rj",
+      name: "Mychel - Blue Consult",
+    },
+    title: "Diferença entre Proof of Work e Proof of Stake de forma SIMPLES!",
+    views: "10k",
+    timesAgo: "1 day ago",
+    link: "https://www.youtube.com/watch?v=9U8ixM0hBFA",
   },
 ];

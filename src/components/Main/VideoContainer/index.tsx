@@ -16,7 +16,6 @@ const VideoContainer: React.FC = () => {
             timesAgo={video.timesAgo}
             channelName={video.channel.name}
             channelLogo={video.channel.logo}
-            hover={video.hover}
             link={video.link}
           />
         ))}

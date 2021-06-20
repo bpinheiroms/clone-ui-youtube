@@ -5,7 +5,6 @@ import { Image } from "@chakra-ui/react";
 
 interface Props {
   thumb: string;
-  hover: string;
   title: string;
   views: string;
   timesAgo: string;
@@ -16,7 +15,6 @@ interface Props {
 
 const VideoItemGroup: React.FC<Props> = ({
   thumb,
-  hover,
   title,
   views,
   timesAgo,
@@ -25,7 +23,6 @@ const VideoItemGroup: React.FC<Props> = ({
   link,
 }) => {
   const [loading, setLoading] = useState(true);
-  const [mouseOver, setMouseOver] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,13 +39,11 @@ const VideoItemGroup: React.FC<Props> = ({
         <>
           <Link target="_blank" href={link}>
             <Image
-              src={mouseOver ? hover : thumb}
+              src={thumb}
               alt={title}
               h="150px"
               width="100%"
               objectFit="inherit"
-              onMouseOver={() => setMouseOver(true)}
-              onMouseOut={() => setMouseOver(false)}
             />
             <Flex>
               <Image
